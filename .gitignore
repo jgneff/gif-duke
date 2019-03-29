@@ -1,0 +1,7 @@
+# Ignore targets and intermediate files
+/duke-waving.gif
+/T??.ppm
+/T??.pbm
+/T??.svg
+/T??.png
+/T??.miff
