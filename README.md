@@ -1,6 +1,6 @@
-# Waving Duke
+# Duke Waving
 
-This project creates an animated GIF of Duke, the Java mascot, waving. The animation is created from a sequence of images in an old copy of *The Java Tutorial.* The output GIF file consists of binary images so that they can be shown in quick succession on an e-paper display using the animation (A2) *waveform* mode, which works only in pure black and white.
+This project creates an animated GIF of Duke, the Java mascot, waving. The animation is created from a sequence of images in an old copy of *The Java Tutorial.* The output GIF file consists of bilevel images so that they can be shown in quick succession on an e-paper display using the animation (A2) *waveform* mode, which works only with pure black and white pixels.
 
 ## Background
 

@@ -1,5 +1,5 @@
 # ======================================================================
-# Makefile - creates a binary animated GIF from a sequence of images
+# Makefile - creates a bilevel animated GIF from a sequence of images
 # Copyright (C) 2019 John Glenn Neffenger
 #
 # This program is free software: you can redistribute it and/or modify
@@ -29,12 +29,12 @@ POTRACE_FLAGS = --backend svg --resolution 90 --turdsize 2
 INKSCAPE_FLAGS = --export-height=400
 
 # Image processing options
-monochrome = -layers flatten -dither None -monochrome -negate
-animation = -delay 13 -dispose none -loop 0
+monochrome = -layers Flatten -dither None -monochrome -negate
+animation = -delay 13 -dispose None -loop 0 -background white
 threshold = -threshold 60%
 
 # Lists of prerequisite files
-miff_list := $(shell echo T{01..10}.miff)
+gif_list := $(shell echo T{01..10}.gif)
 
 # ======================================================================
 # Pattern Rules
@@ -52,7 +52,7 @@ miff_list := $(shell echo T{01..10}.miff)
 %.png: %.svg
 	$(INKSCAPE) $(INKSCAPE_FLAGS) --export-png=$@ $<
 
-%.miff: %.png
+%.gif: %.png
 	$(CONVERT) $< $(monochrome) $@
 
 # ======================================================================
@@ -63,9 +63,9 @@ miff_list := $(shell echo T{01..10}.miff)
 
 all: duke-waving.gif
 
-duke-waving.gif: $(miff_list)
+duke-waving.gif: $(gif_list)
 	$(CONVERT) $(animation) $^ -coalesce $@
 
 clean:
 	rm -f T??.ppm T??.pbm T??.svg T??.png
-	rm -f duke-waving.gif T??.miff
+	rm -f duke-waving.gif T??.gif
