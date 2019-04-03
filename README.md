@@ -2,6 +2,10 @@
 
 This project creates an animated GIF of Duke, the Java mascot, waving. The animation is created from a sequence of images in an old copy of *The Java Tutorial.* The output GIF file consists of bilevel images so that they can be shown in quick succession on an e-paper display using the animation (A2) *waveform* mode, which works only with pure black and white pixels.
 
+See the associated JavaFX project for a [video of the animation](https://jgneff.github.io/epd-javafx/duke.html) on an e-paper display.
+
+[![Duke Waving](https://jgneff.github.io/epd-javafx/images/duke-2019-03-22-180.png)](https://jgneff.github.io/epd-javafx/duke.html)
+
 ## Background
 
 The animation is created from the sequence of 10 images on the page [Displaying a Sequence of Images](https://courses.cs.washington.edu/courses/cse341/99wi/java/tutorial/ui/drawing/imageSequence.html) in the 1997 version of *The Java Tutorial.* The page is in the Table of Contents under the nested headings: Creating a User Interface, Working with Graphics, Performing Animation, Displaying a Sequence of Images. The [old *Java Tutorial*](https://courses.cs.washington.edu/courses/cse341/99wi/java/tutorial/ "The Java Tutorial (1997-07-08)") can be found on several websites including the previous link to the winter 1999 session of *CSE 341: Programming Languages* at the University of Washington.
