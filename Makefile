@@ -1,6 +1,6 @@
 # ======================================================================
 # Makefile - creates a bilevel animated GIF from a sequence of images
-# Copyright (C) 2019 John Neffenger
+# Copyright (C) 2019-2020 John Neffenger
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -29,7 +29,7 @@ POTRACE_FLAGS = --backend svg --resolution 90 --turdsize 2
 INKSCAPE_FLAGS = --export-height=400
 
 # Image processing options
-monochrome = -layers Flatten -dither None -monochrome -negate
+monochrome = -layers Flatten -dither None -monochrome
 animation = -delay 13 -dispose None -loop 0 -background white
 threshold = -threshold 60%
 
